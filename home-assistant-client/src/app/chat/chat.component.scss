@@ -1,0 +1,41 @@
+.answer-wrapper {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.results-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+
+.input-wrapper {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+.prompt-input {
+  flex: 1;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.chat-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.response-html {
+  code {
+    color: white;
+    background-color: grey;
+  }
+}

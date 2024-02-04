@@ -1,0 +1,33 @@
+<div class="chat-wrapper">
+  <div class="results-wrapper">
+    @for(result of results; track result.creationTime) {
+      <div class="answer-wrapper">
+        @defer (when result) {
+          <!-- {{ result.text   }} -->
+          <div class="response-html" [innerHtml]="result.text">
+
+          </div>
+        }
+        @placeholder {
+          <span>Waiting for your prompt</span>
+        }
+        @loading(minimum 1s) {
+          <span>Loading...</span>
+        }
+      </div>
+    }
+
+    @if (loading) {
+      <div class="answer-wrapper">
+        <span>Loading...</span>
+      </div>
+    }
+
+    </div>
+
+
+    <div class="input-wrapper">
+      <input class="prompt-input" id="prompt" [(ngModel)]="prompt" placeholder="Enter your prompt here" />
+      <button (click)="generate()" [disabled]="!prompt">Generate!</button>
+    </div>
+</div>
