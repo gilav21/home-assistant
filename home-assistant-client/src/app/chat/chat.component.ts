@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ChatService } from '../services/chat.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MarkdownModule } from 'ngx-markdown';
 
 @Component({
   selector: 'app-chat',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, MarkdownModule],
+  providers: [],
   templateUrl: './chat.component.html',
   styleUrl: './chat.component.scss'
 })
@@ -31,7 +33,7 @@ export class ChatComponent implements OnInit {
           if (index % 2 == 0) {
             res = res.slice(0, match.index) + '<pre>' + res.slice(match.index + 3);
           } else {
-            res = res.slice(0, match.index) + '</pre>' + res.slice(match.index + 3);
+            res = res.slice(0, match.index + 1) + '</pre>' + res.slice(match.index + 5);
           }
         });
       }

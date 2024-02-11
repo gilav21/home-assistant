@@ -4,9 +4,12 @@
       <div class="answer-wrapper">
         @defer (when result) {
           <!-- {{ result.text   }} -->
-          <div class="response-html" [innerHtml]="result.text">
-
-          </div>
+          <!-- <div class="response-html" [innerHtml]="result.text">
+          </div> -->
+          <markdown
+          lineHighlight
+          clipboard
+          [data]="result.text"></markdown>
         }
         @placeholder {
           <span>Waiting for your prompt</span>
