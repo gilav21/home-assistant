@@ -22,25 +22,20 @@
   padding: 10px 0;
   cursor: pointer;
 
-  a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    margin-right: 15px;
+  // a {
+  //   text-decoration: none;
+    // color: #333;
+  //   font-size: 16px;
+  //   margin-right: 15px;
 
-    &:last-child {
-      margin-right: 0;
-    }
+  //   &:last-child {
+  //     margin-right: 0;
+  //   }
 
-    &:hover {
-      color: #007BFF;
-    }
-  }
-}
-
-.header-title-text {
-  font-size: 24px;
-  color: #333;
+  //   &:hover {
+  //     color: #007BFF;
+  //   }
+  // }
 }
 
 

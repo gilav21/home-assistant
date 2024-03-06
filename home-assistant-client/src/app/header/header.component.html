@@ -3,10 +3,10 @@
     <img class="logo" src="assets/logo.jpg" alt="Home Assistant Client" routerLink="/"/>
   </div>
   <div class="header-title">
-    <div class="header-title-text">Home Assistant Client</div>
+    <div class="text-xl text-gray-600">Home Assistant Client</div>
   </div>
-  <div class="header-menu">
-    <a [ngClass]="{'active': selectedMenu()  === 'home'}"  routerLink="/" (click)="selectMenu('home')">Home</a>
-    <a [ngClass]="{'active': selectedMenu()  === 'chat'}" routerLink="/chat" (click)="selectMenu('chat')">Chat</a>
+  <div class="flex ml-auto space-x-2 pr-4">
+    <a class="text-gray-700 text-base hover:text-blue-600" [ngClass]="{'active': selectedMenu()  === 'home'}"  routerLink="/" (click)="selectMenu('home')">Home</a>
+    <a class="text-gray-700 text-base hover:text-blue-600" [ngClass]="{'active': selectedMenu()  === 'chat'}" routerLink="/chat" (click)="selectMenu('chat')">Chat</a>
   </div>
 </div>
