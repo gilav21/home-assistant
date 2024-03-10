@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { RoundButtonComponent } from '../shared/round-button/round-button.component';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, RoundButtonComponent],
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss']
 })
